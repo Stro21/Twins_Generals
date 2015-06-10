@@ -60,7 +60,7 @@ public class CreateNewWeapon : MonoBehaviour
     }
     private void ChooseRandomWeaponType()
     {
-        int randomTemp = Random.Range(1, 9);
+        int randomTemp = Random.Range(1, 10);
         if (randomTemp == 1)
         {
             new_weapon.Weapon_type = BaseWeapon.WeaponTypes.BOW;
@@ -91,6 +91,10 @@ public class CreateNewWeapon : MonoBehaviour
         else if (randomTemp == 8)
         {
             new_weapon.Weapon_type = BaseWeapon.WeaponTypes.WHIP;
+        }
+        else if (randomTemp == 9)
+        {
+            new_weapon.Weapon_type = BaseWeapon.WeaponTypes.AXE;
         }
     }
 }

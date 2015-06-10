@@ -12,7 +12,8 @@ public class BaseWeapon : BaseEquipment
         GIANTSWORD,
         STAFF,
         DAGGER,
-        WHIP
+        WHIP,
+        AXE
     }
     private WeaponTypes weapon_type;
     
