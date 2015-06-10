@@ -12,5 +12,8 @@ public class BaseTrainerClass : BaseClass
         Magic = 12;
         Physical_Defense = 7;
         Magical_Defense = 8;
+        Race1 = Race.HUMAN;
+        Sex = SexSpecific.UNISEX;
+        Can_Lead = false;
     }
 }

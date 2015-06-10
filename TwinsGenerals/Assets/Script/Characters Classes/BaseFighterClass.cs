@@ -11,6 +11,9 @@ public class BaseFighterClass : BaseClass
         Magic = 10;
         Physical_Defense = 10;
         Magical_Defense = 5;
+        Race1 = Race.HUMAN;
+        Sex = SexSpecific.UNISEX;
+        Can_Lead = false;
 	}
 }
 

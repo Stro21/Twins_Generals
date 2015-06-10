@@ -11,5 +11,8 @@ public class BaseArcherClass : BaseClass {
         Magic = 15;
         Physical_Defense = 5;
         Magical_Defense = 10;
+        Race1 = Race.HUMAN;
+        Sex = SexSpecific.UNISEX;
+        Can_Lead = false;
     }
 }
