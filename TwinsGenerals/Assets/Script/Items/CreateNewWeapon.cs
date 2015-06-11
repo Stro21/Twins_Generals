@@ -17,6 +17,7 @@ public class CreateNewWeapon : MonoBehaviour
         Debug.Log("Physical Defense: " + new_weapon.Physical_defence.ToString());
         Debug.Log("Magical Defense: " + new_weapon.Magical_defence.ToString());
         Debug.Log("Spell Effect ID: " + new_weapon.SpellEffectID.ToString());
+        Debug.Log("Equipment Type: " + new_weapon.Equipment_Type.ToString());
     }
     public void create_weapon(string name, string description, int itemid, int[] stats, BaseWeapon.WeaponTypes weapontype, int spelleffectid)
     {
@@ -37,6 +38,7 @@ public class CreateNewWeapon : MonoBehaviour
         new_weapon.Weapon_type = weapontype;
         //spell effect id
         new_weapon.SpellEffectID = spelleffectid;
+        new_weapon.Equipment_Type = BaseEquipment.EquipmentTypes.RIGHT_HAND;
     }
     public void create_random_weapon()
     {
@@ -57,6 +59,7 @@ public class CreateNewWeapon : MonoBehaviour
         ChooseRandomWeaponType();
         //spell effect id
         new_weapon.SpellEffectID = Random.Range(1, 101);
+        new_weapon.Equipment_Type = BaseEquipment.EquipmentTypes.RIGHT_HAND;
     }
     private void ChooseRandomWeaponType()
     {
