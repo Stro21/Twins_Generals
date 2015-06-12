@@ -12,7 +12,9 @@ public class BaseTrainerClass : BaseClass
         Magic = 12;
         Physical_Defense = 7;
         Magical_Defense = 8;
-        Race1 = Race.HUMAN;
+        Race1 = BaseRace.Race.HUMAN;
+        Race_Description = "Humans are the are most populated inteligent species.";
+        Size = 1;
         Sex = SexSpecific.UNISEX;
         Can_Lead = false;
     }

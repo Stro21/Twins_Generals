@@ -14,6 +14,8 @@ public class BaseFighterClass : BaseClass
         Race1 = Race.HUMAN;
         Sex = SexSpecific.UNISEX;
         Can_Lead = false;
+        Race_Description = "Humans are the are most populated inteligent species.";
+        Size = 1;
 	}
 }
 

@@ -23,9 +23,9 @@ public class CreateNewDefenseEquipment : MonoBehaviour
     {
         defense_equipment = new BaseDefenseEquipment();
 
-        //assign name to the defense equipment
+        //assign Name to the defense equipment
         defense_equipment.Name = name;
-        //defense equipment description
+        //defense equipment Description
         defense_equipment.Description = description;
         //defense equipmentid
         defense_equipment.ItemID = itemid;
@@ -44,9 +44,9 @@ public class CreateNewDefenseEquipment : MonoBehaviour
     {
         defense_equipment = new BaseDefenseEquipment();
 
-        //assign name to the defense equipment
+        //assign Name to the defense equipment
         defense_equipment.Name = "W" + Random.Range(1, 101);
-        //defense equipment description
+        //defense equipment Description
         defense_equipment.Description = "This is a new defense equipment";
         //defense equipmentid
         defense_equipment.ItemID = Random.Range(1, 101);

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseClass {
+public class BaseClass:BaseRace {
 	private string class_name;
 	private string class_description;
 	private int hp;
@@ -9,7 +9,6 @@ public class BaseClass {
 	private int magic;
 	private int physical_defense;
 	private int magical_defense;
-    private Race race;
     private SexSpecific sex;
     private bool can_lead;
 
@@ -24,14 +23,6 @@ public class BaseClass {
         set { sex = value; }
     }
     
-
-    public Race Race1
-    {
-        get { return race; }
-        set { race = value; }
-    }
-    
-
 	public string Class_Name {
 		get {
 			return class_name;
@@ -46,16 +37,6 @@ public class BaseClass {
         MALE,
         FEMALE,
         UNISEX
-    }
-
-    public enum Race
-    {
-        HUMAN,
-        HAWKMAN,
-        DRAGON,
-        GOLEM,
-        BEAST,
-        DEMON
     }
 
 	public string Class_Description {

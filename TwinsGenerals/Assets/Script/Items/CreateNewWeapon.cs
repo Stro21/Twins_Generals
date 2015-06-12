@@ -23,9 +23,9 @@ public class CreateNewWeapon : MonoBehaviour
     {
         new_weapon = new BaseWeapon();
 
-        //assign name to the weapon
+        //assign Name to the weapon
         new_weapon.Name = name;
-        //weapon description
+        //weapon Description
         new_weapon.Description = description;
         //weaponid
         new_weapon.ItemID = itemid;
@@ -44,9 +44,9 @@ public class CreateNewWeapon : MonoBehaviour
     {
         new_weapon = new BaseWeapon();
 
-        //assign name to the weapon
+        //assign Name to the weapon
         new_weapon.Name = "W" + Random.Range(1, 101);
-        //weapon description
+        //weapon Description
         new_weapon.Description = "This is a new weapon";
         //weaponid
         new_weapon.ItemID = Random.Range(1, 101);
