@@ -11,6 +11,9 @@ public class CombatStateMachine : MonoBehaviour
         WIN,
         TIE
     }
+
+    private BattleStates currentstate;
+
     // Use this for initialization
     void Start()
     {
