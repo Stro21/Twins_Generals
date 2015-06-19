@@ -11,6 +11,27 @@ public class BaseClass:BaseRace {
 	private int magical_defense;
     private SexSpecific sex;
     private bool can_lead;
+    private Alignment alignment;
+/*    private int ali_min;
+    private int ali_max;
+
+    public int Ali_Max
+    {
+        get { return ali_max; }
+        set { ali_max = value; }
+    }
+
+    public int Ali_Min
+    {
+        get { return ali_min; }
+        set { ali_min = value; }
+    } */
+
+    public Alignment Alignment1
+    {
+        get { return alignment; }
+        set { alignment = value; }
+    }
 
     public bool Can_Lead
     {
@@ -93,4 +114,14 @@ public class BaseClass:BaseRace {
 			magical_defense = value;
 		}
 	}
+    public enum Alignment
+    {
+        VERY_CHAOTIC,
+        CHAOTIC,
+        NEUTRAL_CHAOTIC,
+        NEUTRAL,
+        NEUTRAL_LAWFUL,
+        LAWFUL,
+        VERY_LAWFUL
+    }
 }

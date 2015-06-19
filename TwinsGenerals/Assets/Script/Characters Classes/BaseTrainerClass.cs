@@ -17,5 +17,6 @@ public class BaseTrainerClass : BaseClass
         Size = 1;
         Sex = SexSpecific.UNISEX;
         Can_Lead = false;
+        Alignment1 = Alignment.NEUTRAL;
     }
 }
