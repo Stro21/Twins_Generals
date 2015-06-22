@@ -17,6 +17,12 @@ public class BaseFighterClass : BaseClass
         Race_Description = "Humans are the are most populated inteligent species.";
         Size = 1;
         Alignment1 = Alignment.NEUTRAL;
+        Previous_class = null;
+        HP_lvl = 6;
+        Str_lvl = 3;
+        Mag_lvl = 1;
+        Phydef_lvl = 4;
+        Mag_lvl = 2;
 	}
 }
 

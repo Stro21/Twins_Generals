@@ -18,5 +18,11 @@ public class BaseTrainerClass : BaseClass
         Sex = SexSpecific.UNISEX;
         Can_Lead = false;
         Alignment1 = Alignment.NEUTRAL;
+        Previous_class = null;
+        HP_lvl = 2;
+        Str_lvl = 2;
+        Mag_lvl = 2;
+        Phydef_lvl = 3;
+        Mag_lvl = 3;
     }
 }

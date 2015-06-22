@@ -12,20 +12,49 @@ public class BaseClass:BaseRace {
     private SexSpecific sex;
     private bool can_lead;
     private Alignment alignment;
-/*    private int ali_min;
-    private int ali_max;
+    private int hp_lvl;
+    private int str_lvl;
+    private int mag_lvl;
+    private int phydef_lvl;
+    private int magdef_lvl;
+    private BaseClass previous_class;
 
-    public int Ali_Max
+    public BaseClass Previous_class
     {
-        get { return ali_max; }
-        set { ali_max = value; }
+        get { return previous_class; }
+        set { previous_class = value; }
     }
 
-    public int Ali_Min
+    public int Magdef_lvl
     {
-        get { return ali_min; }
-        set { ali_min = value; }
-    } */
+        get { return magdef_lvl; }
+        set { magdef_lvl = value; }
+    }
+
+    public int Phydef_lvl
+    {
+        get { return phydef_lvl; }
+        set { phydef_lvl = value; }
+    }
+
+    public int Mag_lvl
+    {
+        get { return mag_lvl; }
+        set { mag_lvl = value; }
+    }
+
+    public int Str_lvl
+    {
+        get { return str_lvl; }
+        set { str_lvl = value; }
+    }
+
+    public int HP_lvl
+    {
+        get { return hp_lvl; }
+        set { hp_lvl = value; }
+    }
+    
 
     public Alignment Alignment1
     {
