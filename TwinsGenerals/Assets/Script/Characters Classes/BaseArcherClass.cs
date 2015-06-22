@@ -16,12 +16,13 @@ public class BaseArcherClass : BaseClass {
         Can_Lead = false;
         Race_Description = "Humans are the are most populated inteligent species.";
         Size = 1;
-        Alignment1 = Alignment.NEUTRAL;
         Previous_class = null;
         HP_lvl = 3;
         Str_lvl = 1;
         Mag_lvl = 3;
         Phydef_lvl = 2;
         Mag_lvl = 4;
+        BaseAlignment ali = new BaseAlignment(45, 55);
+        Alignment = ali;
     }
 }

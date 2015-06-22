@@ -11,7 +11,7 @@ public class BaseClass:BaseRace {
 	private int magical_defense;
     private SexSpecific sex;
     private bool can_lead;
-    private Alignment alignment;
+    private BaseAlignment alignment;
     private int hp_lvl;
     private int str_lvl;
     private int mag_lvl;
@@ -55,13 +55,6 @@ public class BaseClass:BaseRace {
         set { hp_lvl = value; }
     }
     
-
-    public Alignment Alignment1
-    {
-        get { return alignment; }
-        set { alignment = value; }
-    }
-
     public bool Can_Lead
     {
         get { return can_lead; }
@@ -143,14 +136,10 @@ public class BaseClass:BaseRace {
 			magical_defense = value;
 		}
 	}
-    public enum Alignment
+
+    public BaseAlignment Alignment
     {
-        VERY_CHAOTIC,
-        CHAOTIC,
-        NEUTRAL_CHAOTIC,
-        NEUTRAL,
-        NEUTRAL_LAWFUL,
-        LAWFUL,
-        VERY_LAWFUL
+        get { return alignment; }
+        set { alignment = value; }
     }
 }
