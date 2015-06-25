@@ -18,6 +18,20 @@ public class BaseClass:BaseRace {
     private int phydef_lvl;
     private int magdef_lvl;
     private BaseClass previous_class;
+    private bool is_a_protagonist;
+    private BaseSpecialHability hability;
+
+    public BaseSpecialHability Hability
+    {
+        get { return hability; }
+        set { hability = value; }
+    }
+
+    public bool Is_a_Protagonist
+    {
+        get { return is_a_protagonist; }
+        set { is_a_protagonist = value; }
+    }
 
     public BaseClass Previous_class
     {

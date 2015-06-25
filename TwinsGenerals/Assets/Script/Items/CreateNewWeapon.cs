@@ -8,7 +8,7 @@ public class CreateNewWeapon : MonoBehaviour
     void Start()
     {
         create_random_weapon();
-        Debug.Log("Name: "+ new_weapon.Name);
+        Debug.Log("Hability_Name: "+ new_weapon.Name);
         Debug.Log("Description: " + new_weapon.Description);
         Debug.Log("Item ID: " + new_weapon.ItemID.ToString());
         Debug.Log("Weapon Type: " + new_weapon.Weapon_type.ToString());
@@ -23,7 +23,7 @@ public class CreateNewWeapon : MonoBehaviour
     {
         new_weapon = new BaseWeapon();
 
-        //assign Name to the weapon
+        //assign Hability_Name to the weapon
         new_weapon.Name = name;
         //weapon Description
         new_weapon.Description = description;
@@ -44,7 +44,7 @@ public class CreateNewWeapon : MonoBehaviour
     {
         new_weapon = new BaseWeapon();
 
-        //assign Name to the weapon
+        //assign Hability_Name to the weapon
         new_weapon.Name = "W" + Random.Range(1, 101);
         //weapon Description
         new_weapon.Description = "This is a new weapon";

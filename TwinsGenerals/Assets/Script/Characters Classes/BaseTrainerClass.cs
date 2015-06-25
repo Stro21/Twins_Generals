@@ -25,5 +25,7 @@ public class BaseTrainerClass : BaseClass
         Mag_lvl = 3;
         BaseAlignment ali = new BaseAlignment(45, 55);
         Alignment = ali;
+        Is_a_Protagonist = false;
+        Hability = null;
     }
 }

@@ -7,7 +7,7 @@ public class CreateNewDefenseEquipment : MonoBehaviour
     void Start()
     {
         create_random_defense_equipment();
-        Debug.Log("Name: " + defense_equipment.Name);
+        Debug.Log("Hability_Name: " + defense_equipment.Name);
         Debug.Log("Description: " + defense_equipment.Description);
         Debug.Log("Item ID: " + defense_equipment.ItemID.ToString());
         Debug.Log("Defense Equipment Type: " + defense_equipment.Equipment_Type.ToString());
@@ -23,7 +23,7 @@ public class CreateNewDefenseEquipment : MonoBehaviour
     {
         defense_equipment = new BaseDefenseEquipment();
 
-        //assign Name to the defense equipment
+        //assign Hability_Name to the defense equipment
         defense_equipment.Name = name;
         //defense equipment Description
         defense_equipment.Description = description;
@@ -44,7 +44,7 @@ public class CreateNewDefenseEquipment : MonoBehaviour
     {
         defense_equipment = new BaseDefenseEquipment();
 
-        //assign Name to the defense equipment
+        //assign Hability_Name to the defense equipment
         defense_equipment.Name = "W" + Random.Range(1, 101);
         //defense equipment Description
         defense_equipment.Description = "This is a new defense equipment";

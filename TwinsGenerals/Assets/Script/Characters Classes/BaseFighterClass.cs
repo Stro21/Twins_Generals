@@ -24,6 +24,8 @@ public class BaseFighterClass : BaseClass
         Mag_lvl = 2;
         BaseAlignment ali = new BaseAlignment(45, 55);
         Alignment = ali;
+        Is_a_Protagonist = false;
+        Hability = null;
 	}
 }
 
