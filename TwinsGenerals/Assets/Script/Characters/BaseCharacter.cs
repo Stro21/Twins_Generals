@@ -14,6 +14,19 @@ public class BaseCharacter
     private int physical_defense;
     private int magical_defense;
     private int stamina;
+    private Sex sex;
+    private Races race;
+
+    public Races Race
+    {
+        get { return race; }
+        set { race = value; }
+    }
+    public Sex Sex
+    {
+        get { return sex; }
+        set { sex = value; }
+    }
 
     public int Stamina
     {
