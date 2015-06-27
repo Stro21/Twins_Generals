@@ -6,6 +6,7 @@ public class BaseCharacter
     private string name;
     private int level;
     private BaseClass clase;
+    private BaseAlignment current_alignment;
 
     public BaseClass Clase
     {

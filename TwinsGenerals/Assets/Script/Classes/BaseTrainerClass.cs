@@ -23,7 +23,7 @@ public class BaseTrainerClass : BaseClass
         Mag_lvl = 2;
         Phydef_lvl = 3;
         Mag_lvl = 3;
-        BaseAlignment ali = new BaseAlignment(45, 55);
+        BaseAlignment ali = new BaseAlignment(50);
         Alignment = ali;
         Is_a_Protagonist = false;
         Hability = null;

@@ -23,7 +23,7 @@ public class BaseFemaleCaptain : BaseClass
         Mag_lvl = 3;
         Phydef_lvl = 6;
         Mag_lvl = 4;
-        BaseAlignment ali = new BaseAlignment(45, 55);
+        BaseAlignment ali = new BaseAlignment(50);
         Alignment = ali;
         Is_a_Protagonist = true;
         string double_attack = "This hero can attack twice when it attack";

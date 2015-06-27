@@ -22,7 +22,7 @@ public class BaseFighterClass : BaseClass
         Mag_lvl = 1;
         Phydef_lvl = 4;
         Mag_lvl = 2;
-        BaseAlignment ali = new BaseAlignment(45, 55);
+        BaseAlignment ali = new BaseAlignment(50);
         Alignment = ali;
         Is_a_Protagonist = false;
         Hability = null;
