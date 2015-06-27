@@ -6,11 +6,11 @@ public class BaseAlignment
     private Alignment alignment;
     private int ali_min;
     private int ali_max;
+    private int alig;
 
-    public BaseAlignment(int min, int max)
+    public BaseAlignment(int ali)
     {
-        ali_min = min;
-        ali_max = max;
+        alig = ali;
         current_alignment();
     }
 
