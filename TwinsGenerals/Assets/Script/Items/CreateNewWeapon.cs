@@ -19,7 +19,7 @@ public class CreateNewWeapon : MonoBehaviour
         Debug.Log("Spell Effect ID: " + new_weapon.SpellEffectID.ToString());
         Debug.Log("Equipment Type: " + new_weapon.Equipment_Type.ToString());
     }
-    public void create_weapon(string name, string description, int itemid, int[] stats, BaseWeapon.WeaponTypes weapontype, int spelleffectid)
+    public void create_weapon(string name, string description, int itemid, int[] stats, WeaponTypes weapontype, int spelleffectid)
     {
         new_weapon = new BaseWeapon();
 
@@ -38,7 +38,7 @@ public class CreateNewWeapon : MonoBehaviour
         new_weapon.Weapon_type = weapontype;
         //spell effect id
         new_weapon.SpellEffectID = spelleffectid;
-        new_weapon.Equipment_Type = BaseEquipment.EquipmentTypes.RIGHT_HAND;
+        new_weapon.Equipment_Type = EquipmentTypes.RIGHT_HAND;
     }
     public void create_random_weapon()
     {
@@ -59,45 +59,45 @@ public class CreateNewWeapon : MonoBehaviour
         ChooseRandomWeaponType();
         //spell effect id
         new_weapon.SpellEffectID = Random.Range(1, 101);
-        new_weapon.Equipment_Type = BaseEquipment.EquipmentTypes.RIGHT_HAND;
+        new_weapon.Equipment_Type = EquipmentTypes.RIGHT_HAND;
     }
     private void ChooseRandomWeaponType()
     {
         int randomTemp = Random.Range(1, 10);
         if (randomTemp == 1)
         {
-            new_weapon.Weapon_type = BaseWeapon.WeaponTypes.BOW;
+            new_weapon.Weapon_type = WeaponTypes.BOW;
         }
         else if(randomTemp == 2){
-            new_weapon.Weapon_type = BaseWeapon.WeaponTypes.DAGGER;
+            new_weapon.Weapon_type = WeaponTypes.DAGGER;
         }
         else if (randomTemp == 3)
         {
-            new_weapon.Weapon_type = BaseWeapon.WeaponTypes.GIANTSWORD;
+            new_weapon.Weapon_type = WeaponTypes.GIANTSWORD;
         }
         else if (randomTemp == 4)
         {
-            new_weapon.Weapon_type = BaseWeapon.WeaponTypes.LANCE;
+            new_weapon.Weapon_type = WeaponTypes.LANCE;
         }
         else if (randomTemp == 5)
         {
-            new_weapon.Weapon_type = BaseWeapon.WeaponTypes.RAPIER;
+            new_weapon.Weapon_type = WeaponTypes.RAPIER;
         }
         else if (randomTemp == 6)
         {
-            new_weapon.Weapon_type = BaseWeapon.WeaponTypes.STAFF;
+            new_weapon.Weapon_type = WeaponTypes.STAFF;
         }
         else if (randomTemp == 7)
         {
-            new_weapon.Weapon_type = BaseWeapon.WeaponTypes.SWORD;
+            new_weapon.Weapon_type = WeaponTypes.SWORD;
         }
         else if (randomTemp == 8)
         {
-            new_weapon.Weapon_type = BaseWeapon.WeaponTypes.WHIP;
+            new_weapon.Weapon_type = WeaponTypes.WHIP;
         }
         else if (randomTemp == 9)
         {
-            new_weapon.Weapon_type = BaseWeapon.WeaponTypes.AXE;
+            new_weapon.Weapon_type = WeaponTypes.AXE;
         }
     }
 }

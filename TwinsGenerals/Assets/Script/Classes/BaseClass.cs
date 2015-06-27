@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseClass:BaseRace {
+public class BaseClass {
 	private string class_name;
 	private string class_description;
 	private int hp;
@@ -20,6 +20,27 @@ public class BaseClass:BaseRace {
     private BaseClass previous_class;
     private bool is_a_protagonist;
     private BaseSpecialHability hability;
+    private int stamina;
+    private int stamina_lvl;
+    private BaseRace race;
+
+    public BaseRace Race
+    {
+        get { return race; }
+        set { race = value; }
+    }
+
+    public int Stamina_lvl
+    {
+        get { return stamina_lvl; }
+        set { stamina_lvl = value; }
+    }
+
+    public int Stamina
+    {
+        get { return stamina; }
+        set { stamina = value; }
+    }
 
     public BaseSpecialHability Hability
     {
@@ -89,12 +110,7 @@ public class BaseClass:BaseRace {
 		}
 	}
 
-    public enum SexSpecific
-    {
-        MALE,
-        FEMALE,
-        UNISEX
-    }
+    
 
 	public string Class_Description {
 		get {

@@ -3,11 +3,6 @@ using System.Collections;
 
 public class BaseAccesories : BaseItem
 {
-    public enum AccesoriesTypes
-    {
-        NON_CLASS_SPECIFIC,
-        CLASS_SPECIFIC
-    }
     private AccesoriesTypes accesories_types;
     private int spellEffectID;
 
@@ -23,4 +18,10 @@ public class BaseAccesories : BaseItem
         set { accesories_types = value; }
     }
     
+}
+
+public enum AccesoriesTypes
+{
+    NON_CLASS_SPECIFIC,
+    CLASS_SPECIFIC
 }

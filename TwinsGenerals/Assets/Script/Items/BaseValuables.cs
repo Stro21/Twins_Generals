@@ -3,11 +3,7 @@ using System.Collections;
 
 public class BaseValuables : BaseItem
 {
-    public enum ValuablesTypes
-    {
-        PORTABLE,
-        TREASURE
-    }
+    
     private ValuablesTypes value_types;    
     private int spellEffectID;
 
@@ -22,3 +18,8 @@ public class BaseValuables : BaseItem
         set { value_types = value; }
     }
 } 
+public enum ValuablesTypes
+{
+    PORTABLE,
+    TREASURE
+}

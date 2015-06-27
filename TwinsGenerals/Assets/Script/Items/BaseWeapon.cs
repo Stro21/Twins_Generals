@@ -3,18 +3,7 @@ using System.Collections;
 
 public class BaseWeapon : BaseEquipment 
 {
-    public enum WeaponTypes
-    {
-        SWORD,
-        BOW,
-        LANCE,
-        RAPIER,
-        GIANTSWORD,
-        STAFF,
-        DAGGER,
-        WHIP,
-        AXE
-    }
+    
     private WeaponTypes weapon_type;
     
     public WeaponTypes Weapon_type
@@ -22,4 +11,16 @@ public class BaseWeapon : BaseEquipment
         get { return weapon_type; }
         set { weapon_type = value; }
     }
+}
+public enum WeaponTypes
+{
+    SWORD,
+    BOW,
+    LANCE,
+    RAPIER,
+    GIANTSWORD,
+    STAFF,
+    DAGGER,
+    WHIP,
+    AXE
 }

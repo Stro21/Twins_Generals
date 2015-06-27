@@ -6,13 +6,7 @@ public class BaseItem {
     private string name;
     private string description;
     private int itemID;
-    public enum Item_Type
-    {
-        EQUIMENT,
-        EXPENDABLES, 
-        ACCESORIES,
-        VALUABLES
-    }
+    
     private Item_Type item_type;
 
     public Item_Type Item_type
@@ -42,4 +36,11 @@ public class BaseItem {
     }
     
 	
+}
+public enum Item_Type
+{
+    EQUIMENT,
+    EXPENDABLES, 
+    ACCESORIES,
+    VALUABLES
 }

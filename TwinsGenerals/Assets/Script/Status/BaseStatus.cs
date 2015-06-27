@@ -16,17 +16,17 @@ public class BaseStatus : MonoBehaviour
         get { return status; }
         set { status = value; }
     }
-    
-    public enum Status
-    {
-        Normal,
-        Paralyze,
-        Frozen,
-        Burn,
-        Sleep,
-        Attack_Up,
-        Attack_Down,
-        Defence_Up,
-        Defence_Down
-    }
+}
+
+public enum Status
+{
+    Normal,
+    Paralyze,
+    Frozen,
+    Burn,
+    Sleep,
+    Attack_Up,
+    Attack_Down,
+    Defence_Up,
+    Defence_Down
 }

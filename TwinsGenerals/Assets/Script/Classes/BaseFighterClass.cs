@@ -11,11 +11,10 @@ public class BaseFighterClass : BaseClass
         Magic = 10;
         Physical_Defense = 10;
         Magical_Defense = 5;
-        Race1 = Race.HUMAN;
-        Sex = SexSpecific.UNISEX;
+        Sex = SexSpecific.Unisex;
         Can_Lead = false;
-        Race_Description = "Humans are the are most populated inteligent species.";
-        Size = 1;
+        BaseRace race = new BaseRace(Races.HUMAN, "Humans are the are most populated inteligent species.", 1);
+        Race = race;
         Previous_class = null;
         HP_lvl = 6;
         Str_lvl = 3;
@@ -26,6 +25,8 @@ public class BaseFighterClass : BaseClass
         Alignment = ali;
         Is_a_Protagonist = false;
         Hability = null;
+        Stamina = 30;
+        Stamina_lvl = 1;
 	}
 }
 

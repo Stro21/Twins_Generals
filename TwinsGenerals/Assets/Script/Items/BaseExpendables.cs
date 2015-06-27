@@ -3,12 +3,6 @@ using System.Collections;
 
 public class BaseExpendables : BaseItem
 {
-    public enum ExpendablesTypes
-    {
-        CURATIVES,
-        SUPPLEMENTALS,
-        OTHERS
-    }
     private ExpendablesTypes expendables_types;
     private int spellEffectID;
 
@@ -23,4 +17,10 @@ public class BaseExpendables : BaseItem
         get { return expendables_types; }
         set { expendables_types = value; }
     }
+}
+public enum ExpendablesTypes
+{
+    CURATIVES,
+    SUPPLEMENTALS,
+    OTHERS
 }

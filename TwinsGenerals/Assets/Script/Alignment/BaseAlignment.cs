@@ -23,16 +23,6 @@ public class BaseAlignment
         get { return alignment; }
         set { alignment = value; }
     }
-    public enum Alignment
-    {
-        VERY_CHAOTIC,
-        CHAOTIC,
-        NEUTRAL_CHAOTIC,
-        NEUTRAL,
-        NEUTRAL_LAWFUL,
-        LAWFUL,
-        VERY_LAWFUL
-    }
 
     void current_alignment()
     {
@@ -69,4 +59,14 @@ public class BaseAlignment
             Debug.LogError("Error, the aligment must be between 0 and 100.");
         }
     }
+}
+public enum Alignment
+{
+    VERY_CHAOTIC,
+    CHAOTIC,
+    NEUTRAL_CHAOTIC,
+    NEUTRAL,
+    NEUTRAL_LAWFUL,
+    LAWFUL,
+    VERY_LAWFUL
 }

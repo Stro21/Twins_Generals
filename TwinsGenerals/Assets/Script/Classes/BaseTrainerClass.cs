@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class BaseTrainerClass : BaseClass
 {
     public BaseTrainerClass()
@@ -12,10 +13,9 @@ public class BaseTrainerClass : BaseClass
         Magic = 12;
         Physical_Defense = 7;
         Magical_Defense = 8;
-        Race1 = BaseRace.Race.HUMAN;
-        Race_Description = "Humans are the are most populated inteligent species.";
-        Size = 1;
-        Sex = SexSpecific.UNISEX;
+        BaseRace race = new BaseRace(Races.HUMAN, "Humans are the are most populated inteligent species.", 1);
+        Race = race;
+        Sex = SexSpecific.Unisex;
         Can_Lead = false;
         Previous_class = null;
         HP_lvl = 2;
@@ -27,5 +27,7 @@ public class BaseTrainerClass : BaseClass
         Alignment = ali;
         Is_a_Protagonist = false;
         Hability = null;
+        Stamina = 30;
+        Stamina_lvl = 1;
     }
 }

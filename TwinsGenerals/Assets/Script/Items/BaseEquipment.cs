@@ -3,11 +3,6 @@ using System.Collections;
 
 public class BaseEquipment : BaseStatItem
 {
-    public enum EquipmentTypes
-    {
-        RIGHT_HAND, LEFT_HAND, BODY, HEAD
-    }
-
     private EquipmentTypes equipment_type;
 
     private int spellEffectID;
@@ -23,4 +18,11 @@ public class BaseEquipment : BaseStatItem
         get { return equipment_type; }
         set { equipment_type = value; }
     }
+}
+public enum EquipmentTypes
+{
+    RIGHT_HAND,
+    LEFT_HAND,
+    BODY, 
+    HEAD
 }

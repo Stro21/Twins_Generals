@@ -12,11 +12,10 @@ public class BaseMaleCaptain : BaseClass
         Magic = 15;
         Physical_Defense = 15;
         Magical_Defense = 10;
-        Race1 = Race.HUMAN;
-        Sex = SexSpecific.MALE;
+        Sex = SexSpecific.Male;
         Can_Lead = true;
-        Race_Description = "Humans are the are most populated inteligent species.";
-        Size = 1;
+        BaseRace race = new BaseRace(Races.HUMAN, "Humans are the are most populated inteligent species.", 1);
+        Race = race;
         Previous_class = null;
         HP_lvl = 8;
         Str_lvl = 5;
@@ -29,5 +28,7 @@ public class BaseMaleCaptain : BaseClass
         string h_d = "This can ignore a portion of the enemy physical defense";
         BaseSpecialHability special_hability = new BaseSpecialHability("Armor Penetration", h_d);
         Hability = special_hability;
+        Stamina = 40;
+        Stamina_lvl = 2;
     }
 }

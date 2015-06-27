@@ -3,11 +3,18 @@ using System.Collections;
 
 public class BaseRace
 {
-    private Race race;
+    private Races race;
     private string race_description;
     private double size;
 
-    public Race Race1
+    public BaseRace(Races race, string description, double size)
+    {
+        this.race = race;
+        race_description = description;
+        this.size = size;
+    }
+
+    public Races Race1
     {
         get { return race; }
         set { race = value; }
@@ -24,13 +31,14 @@ public class BaseRace
         get { return race_description; }
         set { race_description = value; }
     }
-    public enum Race
-    {
-        HUMAN,
-        HAWKMAN,
-        DRAGON,
-        GOLEM,
-        BEAST,
-        DEMON
-    }
+    
+}
+public enum Races
+{
+    HUMAN,
+    HAWKMAN,
+    DRAGON,
+    GOLEM,
+    BEAST,
+    DEMON
 }
