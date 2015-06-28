@@ -14,7 +14,7 @@ public class WarriorCaptain : BaseClass
         Magical_Defense = 10;
         Sex = SexSpecific.Male;
         Can_Lead = true;
-        BaseRace race = new BaseRace(Races.HUMAN, "Humans are the are most populated inteligent species.", 1);
+        BaseRace race = new HumanRace();
         Race = race;
         Previous_class = null;
         HP_lvl = 8;

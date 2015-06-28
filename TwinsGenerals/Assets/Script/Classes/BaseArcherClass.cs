@@ -13,7 +13,7 @@ public class BaseArcherClass : BaseClass {
         Magical_Defense = 10;
         Sex = SexSpecific.Unisex;
         Can_Lead = false;
-        BaseRace race = new BaseRace(Races.HUMAN, "Humans are the are most populated inteligent species.", 1);
+        BaseRace race = new HumanRace();
         Race = race;
         Previous_class = null;
         HP_lvl = 3;

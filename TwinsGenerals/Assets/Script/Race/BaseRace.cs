@@ -6,12 +6,12 @@ public class BaseRace
     private Races race;
     private string race_description;
     private double size;
+    private double extra_size;
 
-    public BaseRace(Races race, string description, double size)
+    public double Extra_Size
     {
-        this.race = race;
-        race_description = description;
-        this.size = size;
+        get { return extra_size; }
+        set { extra_size = value; }
     }
 
     public Races Race1
@@ -31,7 +31,15 @@ public class BaseRace
         get { return race_description; }
         set { race_description = value; }
     }
-    
+    public bool wrong_size(double size)
+    {
+        return size == 1;
+    }
+
+    public bool wrong_extra_size(double extra)
+    {
+        return extra == 0.5 || extra == 0;
+    }
 }
 public enum Races
 {

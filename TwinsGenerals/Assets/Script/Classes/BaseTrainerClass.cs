@@ -13,7 +13,7 @@ public class BaseTrainerClass : BaseClass
         Magic = 12;
         Physical_Defense = 7;
         Magical_Defense = 8;
-        BaseRace race = new BaseRace(Races.HUMAN, "Humans are the are most populated inteligent species.", 1);
+        BaseRace race = new HumanRace();
         Race = race;
         Sex = SexSpecific.Unisex;
         Can_Lead = false;

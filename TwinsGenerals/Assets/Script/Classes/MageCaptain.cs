@@ -14,7 +14,7 @@ public class MageCaptain : BaseClass
         Magical_Defense = 15;
         Sex = SexSpecific.Female;
         Can_Lead = true;
-        BaseRace race = new BaseRace(Races.HUMAN, "Humans are the are most populated inteligent species.", 1);
+        BaseRace race = new HumanRace();
         Race = race;
         Previous_class = null;
         HP_lvl = 8;
