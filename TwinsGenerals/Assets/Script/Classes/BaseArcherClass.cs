@@ -23,7 +23,6 @@ public class BaseArcherClass : BaseClass {
         Mag_lvl = 4;
         BaseAlignment ali = new BaseAlignment(50);
         Alignment = ali;
-        Is_a_Protagonist = false;
         Hability = null;
         Stamina = 30;
         Stamina_lvl = 1;

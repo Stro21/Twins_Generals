@@ -16,6 +16,13 @@ public class BaseCharacter
     private int stamina;
     private Sex sex;
     private Races race;
+    private bool is_a_protagonist;
+
+    public bool Is_a_protagonist
+    {
+        get { return is_a_protagonist; }
+        set { is_a_protagonist = value; }
+    }
 
     public Races Race
     {
