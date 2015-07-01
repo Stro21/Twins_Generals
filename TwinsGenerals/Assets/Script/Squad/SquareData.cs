@@ -18,8 +18,10 @@ public class SquareData {
         set { character = value; }
     }
 
-    public void add_character(BaseCharacter player)
+    public static SquareData create_squad(SquareData new_squad, BaseCharacter leader)
     {
-        
+        new_squad.Character = leader;
+        new_squad.Square_size_occupied = leader.Race.Size;
+        return new_squad;
     }
 }

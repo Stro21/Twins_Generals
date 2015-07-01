@@ -8,15 +8,22 @@ public class BaseCharacter
     private BaseClass clase;
     private BaseAlignment current_alignment;
     private BaseStatus current_status;
-    private int hp;
+    private int max_hp;
     private int strengh;
     private int magic;
     private int physical_defense;
     private int magical_defense;
     private int stamina;
     private Sex sex;
-    private Races race;
+    private BaseRace race;
     private bool is_a_protagonist;
+    private int current_hp;
+
+    public int Current_HP
+    {
+        get { return current_hp; }
+        set { current_hp = value; }
+    }
 
     public bool Is_a_protagonist
     {
@@ -24,7 +31,7 @@ public class BaseCharacter
         set { is_a_protagonist = value; }
     }
 
-    public Races Race
+    public BaseRace Race
     {
         get { return race; }
         set { race = value; }
@@ -64,10 +71,10 @@ public class BaseCharacter
         set { magical_defense = value; }
     }
 
-    public int HP
+    public int Max_HP
     {
-        get { return hp; }
-        set { hp = value; }
+        get { return max_hp; }
+        set { max_hp = value; }
     }
     
 
@@ -99,6 +106,12 @@ public class BaseCharacter
         get { return name; }
         set { name = value; }
     }
-    
-    
+    public static double Current_hp(BaseCharacter character){
+        return character.Current_HP;
+    }
+    public static BaseCharacter change_hp(BaseCharacter p, int hp)
+    {
+        p.Current_HP = hp;
+        return p;
+    }
 }
