@@ -6,13 +6,13 @@ public class MageCaptain : BaseClass
     public MageCaptain()
     {
         Class_Name = "Mage Captain";
-        Class_Description = "This is Erika first class";
+        Class_Description = "This is protagonist first class, is a magician but you have to choose between Eduardo or Erika, the other will be a Warrior Captain.";
         HP = 60;
         Strengh = 10;
         Magic = 30;
         Physical_Defense = 10;
         Magical_Defense = 15;
-        Sex = SexSpecific.Female;
+        Sex = SexSpecific.Unisex;
         Can_Lead = true;
         BaseRace race = new HumanRace();
         Race = race;

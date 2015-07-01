@@ -18,6 +18,13 @@ public class BaseCharacter
     private BaseRace race;
     private bool is_a_protagonist;
     private int current_hp;
+    private bool is_a_hero;
+
+    public bool Is_a_Hero
+    {
+        get { return is_a_hero; }
+        set { is_a_hero = value; }
+    }
 
     public int Current_HP
     {

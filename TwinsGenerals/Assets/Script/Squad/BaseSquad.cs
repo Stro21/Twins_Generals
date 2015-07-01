@@ -80,15 +80,16 @@ public class BaseSquad
         }
         else if (x == 1 && y == 1)
         {
-            bool a1 = squad[x + 1, y].Square_size_occupied + c.Race.Extra_Size <= 1;
-            bool a2 = squad[x, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            bool a3 = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size <= 1;
+            bool down = squad[x + 1, y].Square_size_occupied + c.Race.Extra_Size <= 1;
+            bool right = squad[x, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
+            bool up = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size <= 1;
+            bool left = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool a4 = squad[x - 1, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool a5 = squad[x + 1, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool a6 = squad[x + 1, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool a7 = squad[x - 1, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            bool a8 = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            c3 = a1 && a2 && a4 && a5 && a7 && a8;
+            
+            c3 = down && right && a4 && a5 && a7 && left;
         }
         return c1 && c2 && c3;
     }
