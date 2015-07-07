@@ -5,6 +5,13 @@ public class BaseSquad
 {
     private SquareData[,] squad = new SquareData[3, 3];
     private BaseCharacter squad_leader;
+    private int squad_size;
+
+    public int Squad_size
+    {
+        get { return squad_size; }
+        set { squad_size = value; }
+    }
 
     public BaseSquad(BaseCharacter leader, int x, int y)
     {
@@ -19,6 +26,8 @@ public class BaseSquad
                 }
             }
             squad[x, y] = SquareData.create_squad(squad[x, y], leader);
+            squad_leader = leader;
+            squad_size = leader.Race.Size;
         }
     }
 
@@ -37,21 +46,27 @@ public class BaseSquad
         return x >= 0 && x < 2 && y >= 0 && y < 2 && leader.Clase.Can_Lead;
     }
 
-    public void add_character()
+    public void add_character(BaseCharacter c, int x, int y)
     {
-
+        if (character_add(c, x, y))
+        {
+            squad[x, y].Character = c;
+            this.squad_size = this.squad_size + c.Race.Size;
+            add_big_character(c, x, y);
+        }
     }
     public bool character_add(BaseCharacter c, int x, int y)
     {
         bool c1 = squad[x, y].Character == null;
-        bool c2 = squad[x, y].Square_size_occupied + c.Race.Size == 1;
-        bool c3;
+        bool c2 = squad[x, y].Square_size_occupied + c.Race.Square_Size == 1;
+        bool c3 = this.squad_size + c.Race.Size <= 5 || this.squad_size + c.Race.Size > 0;
+        bool c4;
         if (x == 0 && y == 0)
         {
             bool down = squad[x + 1, y].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool right = squad[x, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool down_right = squad[x + 1, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            c3 = down && right && down_right;
+            c4 = down && right && down_right;
         }
         else if (x == 0 && y == 1)
         {
@@ -60,14 +75,14 @@ public class BaseSquad
             bool left = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool down_left = squad[x + 1, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool down_right = squad[x + 1, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            c3 = down && right && down_left && down_right;
+            c4 = down && right && down_left && down_right;
         }
         else if (x == 0 && y == 2)
         {
             bool down = squad[x + 1, y].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool left = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool down_left = squad[x + 1, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            c3 = down && left && down_left;
+            c4 = down && left && down_left;
         }
         else if (x == 1 && y == 0)
         {
@@ -76,7 +91,7 @@ public class BaseSquad
             bool up = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool up_right = squad[x - 1, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool down_right = squad[x + 1, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            c3 = down && right && up_right && down_right;
+            c4 = down && right && up_right && down_right;
         }
         else if (x == 1 && y == 1)
         {
@@ -89,7 +104,7 @@ public class BaseSquad
             bool down_right = squad[x + 1, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool down_left = squad[x + 1, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
 
-            c3 = down && right && left && up_right && up_left && down_right && up && down_left;
+            c4 = down && right && left && up_right && up_left && down_right && up && down_left;
         }
         else if (x == 1 && y == 2)
         {
@@ -98,14 +113,14 @@ public class BaseSquad
             bool left = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool up_left = squad[x - 1, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool down_left = squad[x + 1, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            c3 = down && up && left && up_left && down_left;
+            c4 = down && up && left && up_left && down_left;
         }
         else if (x == 2 && y == 0)
         {
             bool right = squad[x, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool up = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool up_right = squad[x - 1, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            c3 = right && up && up_right;
+            c4 = right && up && up_right;
         }
         else if (x == 2 && y == 1)
         {
@@ -114,19 +129,96 @@ public class BaseSquad
             bool left = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool up_right = squad[x - 1, y + 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool up_left = squad[x - 1, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            c3 = right && up && left && up_left && up_right;
+            c4 = right && up && left && up_left && up_right;
         }
         else if (x == 2 && y == 2)
         {
             bool up = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool left = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
             bool up_left = squad[x - 1, y - 1].Square_size_occupied + c.Race.Extra_Size <= 1;
-            c3 = up && left && up_left;
+            c4 = up && left && up_left;
         }
         else
         {
-            c3 = false;
+            c4 = false;
         }
-        return c1 && c2 && c3;
+        return c1 && c2 && c3 && c4;
+    }
+    private void add_big_character(BaseCharacter c, int x, int y)
+    {
+        if (character_add(c, x, y))
+        {
+            if (x == 0 && y == 0)
+            {
+                squad[x + 1, y].Square_size_occupied = squad[x + 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x, y + 1].Square_size_occupied = squad[x, y + 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x + 1, y + 1].Square_size_occupied = squad[x + 1, y + 1].Square_size_occupied + c.Race.Extra_Size;
+            }
+            else if (x == 0 && y == 1)
+            {
+                squad[x + 1, y].Square_size_occupied = squad[x + 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x, y + 1].Square_size_occupied = squad[x, y + 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x, y - 1].Square_size_occupied = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x + 1, y - 1].Square_size_occupied = squad[x + 1, y - 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x + 1, y + 1].Square_size_occupied = squad[x + 1, y + 1].Square_size_occupied + c.Race.Extra_Size;
+            }
+            else if (x == 0 && y == 2)
+            {
+                squad[x + 1, y].Square_size_occupied = squad[x + 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x, y - 1].Square_size_occupied = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x + 1, y - 1].Square_size_occupied = squad[x + 1, y - 1].Square_size_occupied + c.Race.Extra_Size;
+            }
+            else if (x == 1 && y == 0)
+            {
+                squad[x + 1, y].Square_size_occupied = squad[x + 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x, y + 1].Square_size_occupied = squad[x, y + 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y].Square_size_occupied = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y + 1].Square_size_occupied = squad[x - 1, y + 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x + 1, y + 1].Square_size_occupied = squad[x + 1, y + 1].Square_size_occupied + c.Race.Extra_Size;
+            }
+            else if (x == 1 && y == 1)
+            {
+                squad[x + 1, y].Square_size_occupied = squad[x + 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x, y + 1].Square_size_occupied = squad[x, y + 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y].Square_size_occupied = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x, y - 1].Square_size_occupied = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y + 1].Square_size_occupied = squad[x - 1, y + 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y - 1].Square_size_occupied = squad[x - 1, y - 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x + 1, y + 1].Square_size_occupied = squad[x + 1, y + 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x + 1, y - 1].Square_size_occupied = squad[x + 1, y - 1].Square_size_occupied + c.Race.Extra_Size;
+            }
+            else if (x == 1 && y == 2)
+            {
+                squad[x + 1, y].Square_size_occupied = squad[x + 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y].Square_size_occupied = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x, y - 1].Square_size_occupied = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y - 1].Square_size_occupied = squad[x - 1, y - 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x + 1, y - 1].Square_size_occupied = squad[x + 1, y - 1].Square_size_occupied + c.Race.Extra_Size;
+            }
+            else if (x == 2 && y == 0)
+            {
+                squad[x, y + 1].Square_size_occupied = squad[x, y + 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y].Square_size_occupied = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y + 1].Square_size_occupied = squad[x - 1, y + 1].Square_size_occupied + c.Race.Extra_Size;
+            }
+            else if (x == 2 && y == 1)
+            {
+                squad[x, y + 1].Square_size_occupied = squad[x, y + 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y].Square_size_occupied = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x, y - 1].Square_size_occupied = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y + 1].Square_size_occupied = squad[x - 1, y + 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y - 1].Square_size_occupied = squad[x - 1, y - 1].Square_size_occupied + c.Race.Extra_Size;
+            }
+            else if (x == 2 && y == 2)
+            {
+                squad[x - 1, y].Square_size_occupied = squad[x - 1, y].Square_size_occupied + c.Race.Extra_Size;
+                squad[x, y - 1].Square_size_occupied = squad[x, y - 1].Square_size_occupied + c.Race.Extra_Size;
+                squad[x - 1, y - 1].Square_size_occupied = squad[x - 1, y - 1].Square_size_occupied + c.Race.Extra_Size;
+            }
+            else
+            {
+
+            }
+        }
     }
 }

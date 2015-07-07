@@ -5,8 +5,15 @@ public class BaseRace
 {
     private Races race;
     private string race_description;
-    private double size;
+    private int size;
     private double extra_size;
+    private double square_size = 1;
+
+    public double Square_Size
+    {
+        get { return square_size; }
+        set { square_size = value; }
+    }
 
     public double Extra_Size
     {
@@ -20,7 +27,7 @@ public class BaseRace
         set { race = value; }
     }
     
-    public double Size
+    public int Size
     {
         get { return size; }
         set { size = value; }
@@ -31,9 +38,9 @@ public class BaseRace
         get { return race_description; }
         set { race_description = value; }
     }
-    public bool wrong_size(double size)
+    public bool correct_size(int size)
     {
-        return size == 1;
+        return size == 1 || size == 2;
     }
 
     public bool wrong_extra_size(double extra)

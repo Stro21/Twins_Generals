@@ -21,7 +21,7 @@ public class SquareData {
     public static SquareData create_squad(SquareData new_squad, BaseCharacter leader)
     {
         new_squad.Character = leader;
-        new_squad.Square_size_occupied = leader.Race.Size;
+        new_squad.Square_size_occupied = leader.Race.Square_Size;
         return new_squad;
     }
 }
