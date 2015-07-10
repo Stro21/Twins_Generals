@@ -19,6 +19,13 @@ public class BaseCharacter
     private bool is_a_protagonist;
     private int current_hp;
     private bool is_a_hero;
+    private Attribute attribute;
+
+    public Attribute Attribute
+    {
+        get { return attribute; }
+        set { attribute = value; }
+    }
 
     public bool Is_a_Hero
     {
