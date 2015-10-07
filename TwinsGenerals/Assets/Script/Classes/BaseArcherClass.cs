@@ -6,21 +6,14 @@ public class BaseArcherClass : BaseClass {
     {
         Class_Name = "Archer";
         Class_Description = "The basic ranged unit";
-        HP = 30;
-        Strengh = 15;
-        Magic = 15;
-        Physical_Defense = 5;
-        Magical_Defense = 10;
         Sex = SexSpecific.Unisex;
         Can_Lead = false;
         BaseRace race = new HumanRace();
         Race = race;
         Previous_class = null;
-        HP_lvl = 3;
-        Str_lvl = 1;
-        Mag_lvl = 3;
-        Phydef_lvl = 2;
-        Mag_lvl = 4;
+        BaseLevelStats stats1 = new BaseLevelStats(3, 1, 3, 2, 4);
+        BaseStats stats = new BaseStats(30, 15, 15, 5, 10);
+        Stats = stats;
         BaseAlignment ali = new BaseAlignment(50);
         Alignment = ali;
         Hability = null;

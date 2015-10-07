@@ -4,19 +4,11 @@ using System.Collections;
 public class BaseClass {
 	private string class_name;
 	private string class_description;
-	private int hp;
-	private int strengh;
-	private int magic;
-	private int physical_defense;
-	private int magical_defense;
+    private BaseStats stats;
     private SexSpecific sex;
     private bool can_lead;
     private BaseAlignment alignment;
-    private int hp_lvl;
-    private int str_lvl;
-    private int mag_lvl;
-    private int phydef_lvl;
-    private int magdef_lvl;
+    private BaseLevelStats stat_lvl;
     private BaseClass previous_class;
     private BaseSpecialHability hability;
     private int stamina;
@@ -52,36 +44,6 @@ public class BaseClass {
         get { return previous_class; }
         set { previous_class = value; }
     }
-
-    public int Magdef_lvl
-    {
-        get { return magdef_lvl; }
-        set { magdef_lvl = value; }
-    }
-
-    public int Phydef_lvl
-    {
-        get { return phydef_lvl; }
-        set { phydef_lvl = value; }
-    }
-
-    public int Mag_lvl
-    {
-        get { return mag_lvl; }
-        set { mag_lvl = value; }
-    }
-
-    public int Str_lvl
-    {
-        get { return str_lvl; }
-        set { str_lvl = value; }
-    }
-
-    public int HP_lvl
-    {
-        get { return hp_lvl; }
-        set { hp_lvl = value; }
-    }
     
     public bool Can_Lead
     {
@@ -114,55 +76,21 @@ public class BaseClass {
 		}
 	}
 
-	public int HP {
-		get {
-			return hp;
-		}
-		set {
-			hp = value;
-		}
-	}
-
-	public int Strengh {
-		get {
-			return strengh;
-		}
-		set {
-			strengh = value;
-		}
-	}
-
-	public int Magic {
-		get {
-			return magic;
-		}
-        set
-        {
-            magic = value;
-        }
-	}
-
-	public int Physical_Defense {
-		get {
-			return physical_defense;
-		}
-		set {
-			physical_defense = value;
-		}
-	}
-
-	public int Magical_Defense {
-		get {
-			return magical_defense;
-		}
-		set {
-			magical_defense = value;
-		}
-	}
-
     public BaseAlignment Alignment
     {
         get { return alignment; }
         set { alignment = value; }
+    }
+
+    public BaseStats Stats
+    {
+        get { return stats; }
+        set { stats = value; }
+    }
+
+    public BaseLevelStats Stat_Lvl
+    {
+        get { return stat_lvl; }
+        set { stat_lvl = value; }
     }
 }

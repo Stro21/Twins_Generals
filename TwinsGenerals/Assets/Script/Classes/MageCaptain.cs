@@ -7,21 +7,15 @@ public class MageCaptain : BaseClass
     {
         Class_Name = "Mage Captain";
         Class_Description = "This is protagonist first class, is a magician but you have to choose between Eduardo or Erika, the other will be a Warrior Captain.";
-        HP = 60;
-        Strengh = 10;
-        Magic = 30;
-        Physical_Defense = 10;
-        Magical_Defense = 15;
         Sex = SexSpecific.Unisex;
         Can_Lead = true;
         BaseRace race = new HumanRace();
         Race = race;
         Previous_class = null;
-        HP_lvl = 8;
-        Str_lvl = 3;
-        Mag_lvl = 5;
-        Phydef_lvl = 4;
-        Mag_lvl = 6;
+        BaseLevelStats stats_lvl = new BaseLevelStats(8, 3, 5, 4, 6);
+        BaseStats stats = new BaseStats(60, 10, 30, 10, 15);
+        Stats = stats;
+        Stat_Lvl = stats_lvl;
         BaseAlignment ali = new BaseAlignment(50);
         Alignment = ali;
         Hability = null;

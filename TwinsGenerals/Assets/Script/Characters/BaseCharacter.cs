@@ -8,12 +8,8 @@ public class BaseCharacter
     private BaseClass clase;
     private BaseAlignment current_alignment;
     private BaseStatus current_status;
-    private int max_hp;
-    private int strengh;
-    private int magic;
-    private int physical_defense;
-    private int magical_defense;
     private int stamina;
+    private BaseStats stats;
     private Sex sex;
     private BaseRace race;
     private bool is_a_protagonist;
@@ -60,35 +56,6 @@ public class BaseCharacter
     {
         get { return stamina; }
         set { stamina = value; }
-    }
-    public int Strengh
-    {
-        get { return strengh; }
-        set { strengh = value; }
-    }
-    
-    public int Magic
-    {
-        get { return magic; }
-        set { magic = value; }
-    }
-
-    public int Physical_defense
-    {
-        get { return physical_defense; }
-        set { physical_defense = value; }
-    }
-    
-    public int Magical_defense
-    {
-        get { return magical_defense; }
-        set { magical_defense = value; }
-    }
-
-    public int Max_HP
-    {
-        get { return max_hp; }
-        set { max_hp = value; }
     }
     
 

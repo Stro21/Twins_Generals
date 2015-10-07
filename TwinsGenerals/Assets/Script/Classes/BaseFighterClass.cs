@@ -6,21 +6,15 @@ public class BaseFighterClass : BaseClass
 	public BaseFighterClass(){
         Class_Name = "Fighter";
         Class_Description = "The basic melee unit";
-        HP = 40;
-        Strengh = 20;
-        Magic = 10;
-        Physical_Defense = 10;
-        Magical_Defense = 5;
         Sex = SexSpecific.Unisex;
         Can_Lead = false;
         BaseRace race = new HumanRace();
         Race = race;
         Previous_class = null;
-        HP_lvl = 6;
-        Str_lvl = 3;
-        Mag_lvl = 1;
-        Phydef_lvl = 4;
-        Mag_lvl = 2;
+        BaseLevelStats stats1 = new BaseLevelStats(6, 3, 1, 4, 2);
+        BaseStats stats = new BaseStats(40, 20, 10, 10, 5);
+        Stats = stats;
+        Stat_Lvl = stats1;
         BaseAlignment ali = new BaseAlignment(50);
         Alignment = ali;
         Hability = null;

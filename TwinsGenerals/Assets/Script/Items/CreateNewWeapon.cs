@@ -13,7 +13,7 @@ public class CreateNewWeapon : MonoBehaviour
         Debug.Log("Item ID: " + new_weapon.ItemID.ToString());
         Debug.Log("Weapon Type: " + new_weapon.Weapon_type.ToString());
         Debug.Log("Streght: " + new_weapon.Strenght.ToString());
-        Debug.Log("Magic: " + new_weapon.Magic.ToString());
+        Debug.Log("Mag_Lvl: " + new_weapon.Magic.ToString());
         Debug.Log("Physical Defense: " + new_weapon.Physical_defence.ToString());
         Debug.Log("Magical Defense: " + new_weapon.Magical_defence.ToString());
         Debug.Log("Spell Effect ID: " + new_weapon.SpellEffectID.ToString());

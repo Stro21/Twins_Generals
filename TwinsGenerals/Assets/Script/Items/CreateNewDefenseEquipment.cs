@@ -12,7 +12,7 @@ public class CreateNewDefenseEquipment : MonoBehaviour
         Debug.Log("Item ID: " + defense_equipment.ItemID.ToString());
         Debug.Log("Defense Equipment Type: " + defense_equipment.Equipment_Type.ToString());
         Debug.Log("Streght: " + defense_equipment.Strenght.ToString());
-        Debug.Log("Magic: " + defense_equipment.Magic.ToString());
+        Debug.Log("Mag_Lvl: " + defense_equipment.Magic.ToString());
         Debug.Log("Physical Defense: " + defense_equipment.Physical_defence.ToString());
         Debug.Log("Magical Defense: " + defense_equipment.Magical_defence.ToString());
         Debug.Log("Spell Effect ID: " + defense_equipment.SpellEffectID.ToString());

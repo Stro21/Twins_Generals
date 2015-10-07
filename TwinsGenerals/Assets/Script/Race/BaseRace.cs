@@ -54,10 +54,11 @@ public class BaseRace
 }
 public enum Races
 {
-    HUMAN,
-    HAWKMAN,
-    DRAGON,
-    GOLEM,
-    BEAST,
-    DEMON
+    Human,
+    Hawkman,
+    Dragon,
+    Golem,
+    Beast,
+    Demon,
+    Undead
 }
