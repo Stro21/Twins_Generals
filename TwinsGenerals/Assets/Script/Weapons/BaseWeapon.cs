@@ -14,13 +14,13 @@ public class BaseWeapon : BaseEquipment
 }
 public enum WeaponTypes
 {
-    SWORD,
-    BOW,
-    LANCE,
-    RAPIER,
-    GIANTSWORD,
-    STAFF,
-    DAGGER,
-    WHIP,
-    AXE
+    Sword,
+    Bow,
+    Lance,
+    Rapier,
+    Two_Handed_Sword,
+    Staff,
+    Dagger,
+    Whip,
+    Axe
 }

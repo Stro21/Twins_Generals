@@ -22,6 +22,6 @@ public class BaseAccesories : BaseItem
 
 public enum AccesoriesTypes
 {
-    NON_CLASS_SPECIFIC,
-    CLASS_SPECIFIC
+    Non_Class_Specific,
+    Class_Specific
 }

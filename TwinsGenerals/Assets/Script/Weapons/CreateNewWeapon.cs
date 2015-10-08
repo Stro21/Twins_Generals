@@ -12,10 +12,10 @@ public class CreateNewWeapon : MonoBehaviour
         Debug.Log("Description: " + new_weapon.Description);
         Debug.Log("Item ID: " + new_weapon.ItemID.ToString());
         Debug.Log("Weapon Type: " + new_weapon.Weapon_type.ToString());
-        Debug.Log("Streght: " + new_weapon.Strenght.ToString());
-        Debug.Log("Mag_Lvl: " + new_weapon.Magic.ToString());
-        Debug.Log("Physical Defense: " + new_weapon.Physical_defence.ToString());
-        Debug.Log("Magical Defense: " + new_weapon.Magical_defence.ToString());
+        Debug.Log("Streght: " + new_weapon.Stats.Strengh.ToString());
+        Debug.Log("Magic: " + new_weapon.Stats.Magic.ToString());
+        Debug.Log("Physical Defense: " + new_weapon.Stats.Physical_defense.ToString());
+        Debug.Log("Magical Defense: " + new_weapon.Stats.Magical_defense.ToString());
         Debug.Log("Spell Effect ID: " + new_weapon.SpellEffectID.ToString());
         Debug.Log("Equipment Type: " + new_weapon.Equipment_Type.ToString());
     }
@@ -29,16 +29,16 @@ public class CreateNewWeapon : MonoBehaviour
         new_weapon.Description = description;
         //weaponid
         new_weapon.ItemID = itemid;
-        //stats
-        new_weapon.Strenght = stats[0];
-        new_weapon.Magic = stats[1];
-        new_weapon.Physical_defence = stats[2];
-        new_weapon.Magical_defence = stats[3];
+        //Stats
+        new_weapon.Stats.Strengh = stats[0];
+        new_weapon.Stats.Magic = stats[1];
+        new_weapon.Stats.Physical_defense = stats[2];
+        new_weapon.Stats.Magical_defense = stats[3];
         //choose type of weapon
         new_weapon.Weapon_type = weapontype;
         //spell effect id
         new_weapon.SpellEffectID = spelleffectid;
-        new_weapon.Equipment_Type = EquipmentTypes.RIGHT_HAND;
+        new_weapon.Equipment_Type = EquipmentTypes.Right_Hand;
     }
     public void create_random_weapon()
     {
@@ -50,54 +50,54 @@ public class CreateNewWeapon : MonoBehaviour
         new_weapon.Description = "This is a new weapon";
         //weaponid
         new_weapon.ItemID = Random.Range(1, 101);
-        //stats
-        new_weapon.Strenght = Random.Range(1, 11);
-        new_weapon.Magic = Random.Range(1, 11);
-        new_weapon.Physical_defence = Random.Range(1, 11);
-        new_weapon.Magical_defence = Random.Range(1, 11);
+        //Stats
+        new_weapon.Stats.Strengh = Random.Range(1, 11);
+        new_weapon.Stats.Magic = Random.Range(1, 11);
+        new_weapon.Stats.Physical_defense = Random.Range(1, 11);
+        new_weapon.Stats.Magical_defense = Random.Range(1, 11);
         //choose type of weapon
         ChooseRandomWeaponType();
         //spell effect id
         new_weapon.SpellEffectID = Random.Range(1, 101);
-        new_weapon.Equipment_Type = EquipmentTypes.RIGHT_HAND;
+        new_weapon.Equipment_Type = EquipmentTypes.Right_Hand;
     }
     private void ChooseRandomWeaponType()
     {
         int randomTemp = Random.Range(1, 10);
         if (randomTemp == 1)
         {
-            new_weapon.Weapon_type = WeaponTypes.BOW;
+            new_weapon.Weapon_type = WeaponTypes.Bow;
         }
         else if(randomTemp == 2){
-            new_weapon.Weapon_type = WeaponTypes.DAGGER;
+            new_weapon.Weapon_type = WeaponTypes.Dagger;
         }
         else if (randomTemp == 3)
         {
-            new_weapon.Weapon_type = WeaponTypes.GIANTSWORD;
+            new_weapon.Weapon_type = WeaponTypes.Two_Handed_Sword;
         }
         else if (randomTemp == 4)
         {
-            new_weapon.Weapon_type = WeaponTypes.LANCE;
+            new_weapon.Weapon_type = WeaponTypes.Lance;
         }
         else if (randomTemp == 5)
         {
-            new_weapon.Weapon_type = WeaponTypes.RAPIER;
+            new_weapon.Weapon_type = WeaponTypes.Rapier;
         }
         else if (randomTemp == 6)
         {
-            new_weapon.Weapon_type = WeaponTypes.STAFF;
+            new_weapon.Weapon_type = WeaponTypes.Staff;
         }
         else if (randomTemp == 7)
         {
-            new_weapon.Weapon_type = WeaponTypes.SWORD;
+            new_weapon.Weapon_type = WeaponTypes.Sword;
         }
         else if (randomTemp == 8)
         {
-            new_weapon.Weapon_type = WeaponTypes.WHIP;
+            new_weapon.Weapon_type = WeaponTypes.Whip;
         }
         else if (randomTemp == 9)
         {
-            new_weapon.Weapon_type = WeaponTypes.AXE;
+            new_weapon.Weapon_type = WeaponTypes.Axe;
         }
     }
 }

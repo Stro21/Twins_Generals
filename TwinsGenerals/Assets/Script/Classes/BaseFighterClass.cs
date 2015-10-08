@@ -11,15 +11,13 @@ public class BaseFighterClass : BaseClass
         BaseRace race = new HumanRace();
         Race = race;
         Previous_class = null;
-        BaseLevelStats stats1 = new BaseLevelStats(6, 3, 1, 4, 2);
-        BaseStats stats = new BaseStats(40, 20, 10, 10, 5);
+        BaseLevelStats stats1 = new BaseLevelStats(6, 3, 1, 4, 2, 1);
+        BaseStats stats = new BaseStats(40, 20, 10, 10, 5, 30);
         Stats = stats;
         Stat_Lvl = stats1;
         BaseAlignment ali = new BaseAlignment(50);
         Alignment = ali;
         Hability = null;
-        Stamina = 30;
-        Stamina_lvl = 1;
 	}
 }
 

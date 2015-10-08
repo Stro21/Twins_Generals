@@ -8,13 +8,16 @@ public class BaseStats
     private int magic;
     private int physical_defense; 
     private int magical_defense;
-    public BaseStats(int hp, int str, int mag, int phy_def, int mag_def)
+    private int stamina;
+
+    public BaseStats(int hp, int str, int mag, int phy_def, int mag_def, int stamina)
     {
         this.hp = hp;
         strengh = str;
         magic = mag;
         physical_defense = phy_def;
         magical_defense = mag_def;
+        this.stamina = stamina;
     }
     public int HP
     {
@@ -40,5 +43,10 @@ public class BaseStats
     {
         get { return magical_defense; }
         set { magical_defense = value; }
+    }
+    public int Stamina
+    {
+        get { return stamina; }
+        set { stamina = value; }
     }
 }

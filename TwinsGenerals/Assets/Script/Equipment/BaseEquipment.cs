@@ -1,18 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseEquipment : BaseStatItem
+public class BaseEquipment : BaseItem
 {
     private EquipmentTypes equipment_type;
+    private BaseStats stats;
 
-    private int spellEffectID;
-
-    public int SpellEffectID
+    public BaseStats Stats
     {
-        get { return spellEffectID; }
-        set { spellEffectID = value; }
+        get { return stats; }
+        set { stats = value; }
     }
-
     public EquipmentTypes Equipment_Type
     {
         get { return equipment_type; }
@@ -21,8 +19,8 @@ public class BaseEquipment : BaseStatItem
 }
 public enum EquipmentTypes
 {
-    RIGHT_HAND,
-    LEFT_HAND,
-    BODY, 
-    HEAD
+    Right_Hand,
+    Left_Hand,
+    Body, 
+    Head
 }

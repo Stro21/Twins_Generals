@@ -12,14 +12,12 @@ public class MageCaptain : BaseClass
         BaseRace race = new HumanRace();
         Race = race;
         Previous_class = null;
-        BaseLevelStats stats_lvl = new BaseLevelStats(8, 3, 5, 4, 6);
-        BaseStats stats = new BaseStats(60, 10, 30, 10, 15);
+        BaseLevelStats stats_lvl = new BaseLevelStats(8, 3, 5, 4, 6, 2);
+        BaseStats stats = new BaseStats(60, 10, 30, 10, 15, 40);
         Stats = stats;
         Stat_Lvl = stats_lvl;
         BaseAlignment ali = new BaseAlignment(50);
         Alignment = ali;
         Hability = null;
-        Stamina = 40;
-        Stamina_lvl = 2;
     }
 }

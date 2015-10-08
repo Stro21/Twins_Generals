@@ -11,26 +11,12 @@ public class BaseClass {
     private BaseLevelStats stat_lvl;
     private BaseClass previous_class;
     private BaseSpecialHability hability;
-    private int stamina;
-    private int stamina_lvl;
     private BaseRace race;
 
     public BaseRace Race
     {
         get { return race; }
         set { race = value; }
-    }
-
-    public int Stamina_lvl
-    {
-        get { return stamina_lvl; }
-        set { stamina_lvl = value; }
-    }
-
-    public int Stamina
-    {
-        get { return stamina; }
-        set { stamina = value; }
     }
 
     public BaseSpecialHability Hability

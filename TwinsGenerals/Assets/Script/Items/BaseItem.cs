@@ -6,8 +6,14 @@ public class BaseItem {
     private string name;
     private string description;
     private int itemID;
-    
     private Item_Type item_type;
+    private int spellEffectID;
+
+    public int SpellEffectID
+    {
+        get { return spellEffectID; }
+        set { spellEffectID = value; }
+    }
 
     public Item_Type Item_type
     {
@@ -39,8 +45,8 @@ public class BaseItem {
 }
 public enum Item_Type
 {
-    EQUIMENT,
-    EXPENDABLES, 
-    ACCESORIES,
-    VALUABLES
+    Equipment,
+    Expendables, 
+    Accesories,
+    Valuables
 }

@@ -20,6 +20,6 @@ public class BaseValuables : BaseItem
 } 
 public enum ValuablesTypes
 {
-    PORTABLE,
-    TREASURE
+    Portable,
+    Treasure
 }

@@ -4,7 +4,7 @@ using System.Collections;
 public class BaseDefenseEquipment : BaseEquipment
 {
     private DefenseEquipmentTypes defense_equipment_types;
-
+    
     public DefenseEquipmentTypes Defense_Equipment_Types
     {
         get { return defense_equipment_types; }
@@ -13,11 +13,11 @@ public class BaseDefenseEquipment : BaseEquipment
 }
 public enum DefenseEquipmentTypes
 {
-    SHIELD,
-    BOOK,
-    HELM,
-    HAT,
-    LIGHT_ARMOR,
-    MEDIUM_ARMOR,
-    HEAVY_ARMOR
+    Shield,
+    Book,
+    Helm,
+    Hat,
+    Light_Armor,
+    Medium_Armor,
+    Heavy_Armor
 }

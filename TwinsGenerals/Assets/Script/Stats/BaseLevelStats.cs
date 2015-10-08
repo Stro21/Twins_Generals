@@ -8,13 +8,16 @@ public class BaseLevelStats
     private int mag_lvl;
     private int phy_def_lvl; 
     private int magl_def_lvl;
-    public BaseLevelStats(int hp, int str, int mag, int phy_def, int mag_def)
+    private int stamina_lvl;
+
+    public BaseLevelStats(int hp, int str, int mag, int phy_def, int mag_def, int stamina)
     {
         this.hp_lvl = hp;
         str_lvl = str;
         mag_lvl = mag;
         phy_def_lvl = phy_def;
         magl_def_lvl = mag_def;
+        stamina_lvl = stamina;
     }
     public int HP_Lvl
     {
@@ -40,5 +43,10 @@ public class BaseLevelStats
     {
         get { return magl_def_lvl; }
         set { magl_def_lvl = value; }
+    }
+    public int Stamina_lvl
+    {
+        get { return stamina_lvl; }
+        set { stamina_lvl = value; }
     }
 }

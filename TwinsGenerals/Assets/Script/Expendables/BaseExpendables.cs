@@ -20,7 +20,7 @@ public class BaseExpendables : BaseItem
 }
 public enum ExpendablesTypes
 {
-    CURATIVES,
-    SUPPLEMENTALS,
-    OTHERS
+    Curatives,
+    Supplamentals,
+    Others
 }

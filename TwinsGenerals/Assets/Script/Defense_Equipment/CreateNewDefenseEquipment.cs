@@ -29,7 +29,7 @@ public class CreateNewDefenseEquipment : MonoBehaviour
         defense_equipment.Description = description;
         //defense equipmentid
         defense_equipment.ItemID = itemid;
-        //stats
+        //Stats
         defense_equipment.Strenght = stats[0];
         defense_equipment.Magic = stats[1];
         defense_equipment.Physical_defence = stats[2];
@@ -50,7 +50,7 @@ public class CreateNewDefenseEquipment : MonoBehaviour
         defense_equipment.Description = "This is a new defense equipment";
         //defense equipmentid
         defense_equipment.ItemID = Random.Range(1, 101);
-        //stats
+        //Stats
         defense_equipment.Strenght = Random.Range(1, 11);
         defense_equipment.Magic = Random.Range(1, 11);
         defense_equipment.Physical_defence = Random.Range(1, 11);
@@ -66,31 +66,31 @@ public class CreateNewDefenseEquipment : MonoBehaviour
         int randomTemp = Random.Range(1, 8);
         if (randomTemp == 1)
         {
-            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.BOOK;
+            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.Book;
         }
         else if (randomTemp == 2)
         {
-            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.HAT;
+            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.Hat;
         }
         else if (randomTemp == 3)
         {
-            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.HEAVY_ARMOR;
+            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.Heavy_Armor;
         }
         else if (randomTemp == 4)
         {
-            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.HELM;
+            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.Helm;
         }
         else if (randomTemp == 5)
         {
-            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.LIGHT_ARMOR;
+            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.Light_Armor;
         }
         else if (randomTemp == 6)
         {
-            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.MEDIUM_ARMOR;
+            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.Medium_Armor;
         }
         else if (randomTemp == 7)
         {
-            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.SHIELD;
+            defense_equipment.Defense_Equipment_Types = DefenseEquipmentTypes.Shield;
         }
     }
     private void ChooseRandomEquipmentType()
@@ -98,15 +98,15 @@ public class CreateNewDefenseEquipment : MonoBehaviour
         int random = Random.Range(1, 4);
         if (random == 1)
         {
-            defense_equipment.Equipment_Type = EquipmentTypes.LEFT_HAND;
+            defense_equipment.Equipment_Type = EquipmentTypes.Left_Hand;
         }
         else if (random == 2)
         {
-            defense_equipment.Equipment_Type = EquipmentTypes.HEAD;
+            defense_equipment.Equipment_Type = EquipmentTypes.Head;
         }
         else if (random == 3)
         {
-            defense_equipment.Equipment_Type = EquipmentTypes.BODY;
+            defense_equipment.Equipment_Type = EquipmentTypes.Body;
         }
     }
 }

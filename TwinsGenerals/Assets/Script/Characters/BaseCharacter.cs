@@ -16,6 +16,13 @@ public class BaseCharacter
     private int current_hp;
     private bool is_a_hero;
     private Attribute attribute;
+    private int experience;
+
+    public int Experience
+    {
+        get { return experience; }
+        set { experience = value; }
+    }
 
     public Attribute Attribute
     {
@@ -94,5 +101,18 @@ public class BaseCharacter
     {
         p.Current_HP = hp;
         return p;
+    }
+    public void level_up()
+    {
+        if (level < 100)
+        {
+            level++;
+            stats.HP = +clase.Stat_Lvl.HP_Lvl;
+            stats.Magic = +clase.Stat_Lvl.Mag_Lvl;
+            stats.Strengh = +clase.Stat_Lvl.Str_Lvl;
+            stats.Physical_defense = +clase.Stat_Lvl.Phy_Def_Lvl;
+            stats.Magical_defense = +clase.Stat_Lvl.Mag_Def_Lvl;
+            stats.Stamina = +clase.Stat_Lvl.Stamina_lvl;
+        }
     }
 }

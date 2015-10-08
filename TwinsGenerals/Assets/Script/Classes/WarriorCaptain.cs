@@ -12,14 +12,12 @@ public class WarriorCaptain : BaseClass
         BaseRace race = new HumanRace();
         Race = race;
         Previous_class = null;
-        BaseStats stats = new BaseStats(60, 30, 10, 15, 10);
-        BaseLevelStats stats_lvl = new BaseLevelStats(8, 5, 3, 6, 4);
+        BaseStats stats = new BaseStats(60, 30, 10, 15, 10, 40);
+        BaseLevelStats stats_lvl = new BaseLevelStats(8, 5, 3, 6, 4, 2);
         Stats = stats;
         Stat_Lvl = stats_lvl;
         BaseAlignment ali = new BaseAlignment(50);
         Alignment = ali;
         Hability = null;
-        Stamina = 40;
-        Stamina_lvl = 2;
     }
 }
